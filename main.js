@@ -54,3 +54,21 @@ document.getElementById('generate-btn').addEventListener('click', () => {
   const lottoNumbersElement = document.querySelector('lotto-numbers');
   lottoNumbersElement.render(lottoNumbersElement.generateLottoNumbers());
 });
+
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-theme');
+  themeToggle.textContent = 'Light Mode';
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-theme');
+  const isDark = body.classList.contains('dark-theme');
+  themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
