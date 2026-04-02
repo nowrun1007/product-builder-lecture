@@ -1,1 +1,83 @@
-/* Add styles here */
+
+:root {
+  --background-color: #f0f0f0;
+  --card-background-color: #ffffff;
+  --primary-color: #4a90e2;
+  --text-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.lotto-card {
+  background-color: var(--card-background-color);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  margin-bottom: 2rem;
+}
+
+lotto-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#generate-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+#generate-btn:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+#generate-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  lotto-numbers {
+    flex-wrap: wrap;
+  }
+
+  #generate-btn {
+    font-size: 1rem;
+  }
+}
