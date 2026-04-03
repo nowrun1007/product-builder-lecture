@@ -88,6 +88,22 @@ main {
   min-height: 200px;
 }
 
+.ad-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.top-ad {
+  margin-top: -1rem;
+}
+
+.bottom-ad {
+  margin-bottom: 3rem;
+}
+
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
