@@ -28,10 +28,15 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Smooth transition for all UI elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .theme-toggle {
@@ -80,6 +85,43 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  min-height: 200px;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: var(--sub-text-color);
+  background-color: var(--card-background-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.search-section {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+#benefit-search {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+#benefit-search:focus {
+  outline: none;
+  box-shadow: 0 6px 16px var(--shadow-color);
+  transform: translateY(-2px);
 }
 
 .benefit-card {
@@ -87,10 +129,22 @@ main {
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px var(--shadow-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .benefit-card:hover {

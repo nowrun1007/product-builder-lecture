@@ -57,10 +57,20 @@ const benefits = [
   }
 ];
 
-function renderBenefits() {
+function renderBenefits(filterText = '') {
   const container = document.getElementById('benefit-container');
-  container.innerHTML = benefits.map(benefit => `
-    <div class="benefit-card">
+  const filteredBenefits = benefits.filter(benefit => 
+    benefit.title.toLowerCase().includes(filterText.toLowerCase()) ||
+    benefit.description.toLowerCase().includes(filterText.toLowerCase())
+  );
+
+  if (filteredBenefits.length === 0) {
+    container.innerHTML = `<div class="no-results">검색 결과가 없습니다.</div>`;
+    return;
+  }
+
+  container.innerHTML = filteredBenefits.map((benefit, index) => `
+    <div class="benefit-card" style="animation-delay: ${index * 0.1}s">
       <div class="card-content">
         <h3>${benefit.title}</h3>
         <div class="amount">${benefit.amount}</div>
@@ -71,6 +81,12 @@ function renderBenefits() {
     </div>
   `).join('');
 }
+
+// Search Logic
+const searchInput = document.getElementById('benefit-search');
+searchInput.addEventListener('input', (e) => {
+  renderBenefits(e.target.value);
+});
 
 // Theme Toggle Logic
 const themeToggle = document.getElementById('theme-toggle');
@@ -90,4 +106,4 @@ themeToggle.addEventListener('click', () => {
 });
 
 // Initial Render
-document.addEventListener('DOMContentLoaded', renderBenefits);
+document.addEventListener('DOMContentLoaded', () => renderBenefits());
