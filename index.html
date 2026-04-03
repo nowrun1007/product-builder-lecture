@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <a href="#about" class="nav-logo">강남구 혜택</a>
+      <div class="nav-links">
+        <a href="#about">소개</a>
+        <a href="#benefit-search">혜택검색</a>
+        <a href="#contact">문의하기</a>
+        <a href="#privacy">정책</a>
+      </div>
+    </div>
+  </nav>
   <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
   <header>
     <h1>강남구 출산 혜택 가이드</h1>
@@ -31,12 +42,19 @@
   </div>
 
   <main>
+    <section id="about" class="info-section">
+      <h2>가이드 소개</h2>
+      <p>본 가이드는 강남구 거주 임산부와 부모님들이 복잡한 출산 지원 정책을 한눈에 확인하고 실질적인 도움을 받으실 수 있도록 제작되었습니다. 정부 및 지자체의 최신 정보를 바탕으로 신뢰할 수 있는 가이드를 제공하고자 노력하고 있습니다.</p>
+    </section>
+
     <section class="search-section">
       <input type="text" id="benefit-search" placeholder="혜택 이름을 검색해보세요... (예: 출산, 부모)">
     </section>
+    
     <div id="benefit-container" class="benefit-grid">
       <!-- Benefits will be injected here by main.js -->
     </div>
+
     <section id="contact" class="contact-section">
       <h2>추가 혜택 문의하기</h2>
       <p>궁금한 점이 있으시거나 추가 혜택 정보가 필요하시면 아래 폼을 통해 연락주세요.</p>
@@ -55,6 +73,11 @@
         </div>
         <button type="submit" class="submit-btn">문의 보내기</button>
       </form>
+    </section>
+
+    <section id="privacy" class="info-section privacy-section">
+      <h2>개인정보처리방침</h2>
+      <p>본 사이트는 사용자의 개인정보를 소중히 다룹니다. 문의 폼을 통해 수집된 성함과 이메일 주소는 문의 답변 목적으로만 사용되며, 그 외의 용도로는 활용되거나 제3자에게 제공되지 않습니다. 또한, 구글 애드센스 광고를 통해 방문자의 쿠키 정보가 수집될 수 있으며, 이는 맞춤형 광고 제공을 위한 목적으로만 사용됩니다.</p>
     </section>
   </main>
 
