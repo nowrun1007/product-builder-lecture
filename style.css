@@ -113,6 +113,28 @@ body.dark-theme .privacy-section {
   background-color: rgba(93, 173, 226, 0.05);
 }
 
+.faq-item {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--shadow-color);
+  padding-bottom: 1rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: var(--sub-text-color);
+}
+
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -308,6 +330,7 @@ footer {
   }
   .benefit-grid {
     grid-template-columns: 1fr;
+
   }
 }
 

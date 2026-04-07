@@ -40,13 +40,45 @@
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "강남구 출산 혜택 가이드",
-    "url": "https://nowrun1007.github.io/product-builder-lecture/",
-    "description": "2026년 최신 강남구 출산 및 육아 지원 정보를 제공하는 전문 가이드입니다."
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "강남구 출산 혜택 가이드",
+      "url": "https://nowrun1007.github.io/product-builder-lecture/",
+      "description": "2026년 최신 강남구 출산 및 육아 지원 정보를 제공하는 전문 가이드입니다."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "강남구 출산양육지원금은 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "강남구는 첫째·둘째 200만 원, 셋째 300만 원, 넷째 이상은 500만 원을 지급합니다. 단, 출생일 기준 1년 전부터 부 또는 모가 강남구에 계속 거주해야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "부모급여 신청은 어떻게 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "복지로(bokjiro.go.kr), 정부24(gov.kr) 홈페이지를 통한 온라인 신청이나 거주지 동 주민센터 방문 신청이 가능합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "임산부 교통비 지원 대상은?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "서울시에 6개월 이상 거주한 임산부라면 누구나 신청 가능하며, 임신 12주부터 출산 후 3개월 이내에 신청할 수 있습니다."
+          }
+        }
+      ]
+    }
+  ]
   </script>
 
   <meta name="google-adsense-account" content="ca-pub-5384580632355206">
@@ -100,6 +132,22 @@
     <div id="benefit-container" class="benefit-grid">
       <!-- Benefits will be injected here by main.js -->
     </div>
+
+    <section id="faq" class="info-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-item">
+        <h3>강남구 출산양육지원금은 얼마인가요?</h3>
+        <p>강남구는 첫째·둘째 200만 원, 셋째 300만 원, 넷째 이상은 500만 원을 지급합니다. 단, 출생일 기준 1년 전부터 부 또는 모가 강남구에 계속 거주해야 합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>부모급여 신청은 어떻게 하나요?</h3>
+        <p>복지로(bokjiro.go.kr), 정부24(gov.kr) 홈페이지를 통한 온라인 신청이나 거주지 동 주민센터 방문 신청이 가능합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>임산부 교통비 지원 대상은?</h3>
+        <p>서울시에 6개월 이상 거주한 임산부라면 누구나 신청 가능하며, 임신 12주부터 출산 후 3개월 이내에 신청할 수 있습니다.</p>
+      </div>
+    </section>
 
     <section id="contact" class="contact-section">
       <h2>추가 혜택 문의하기</h2>
