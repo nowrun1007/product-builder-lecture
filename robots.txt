@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nowrun1007.github.io/product-builder-lecture/sitemap.xml
